@@ -4,4 +4,13 @@ class Solution:
     # 函数返回True/False
     def duplicate(self, numbers, duplication):
         # write code here
-      
+        tmp = []
+        for i in numbers:
+            if i in tmp:
+                duplication[0]=i
+                return True
+            else:
+                tmp.append(i)
+        return False
+
+
